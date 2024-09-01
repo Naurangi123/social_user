@@ -168,6 +168,7 @@ MEDIA_URL = "/media/"
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "crispy_forms"
 
 FILE_UPLOAD_HANDLERS = [
     "django.core.files.uploadhandler.MemoryFileUploadHandler",

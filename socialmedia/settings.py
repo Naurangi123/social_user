@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-zb+4$e7f!rn(r%&@td0=p04aq*7%l$$#e8h6_y=o%@4fpr-(nm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ghost123.pythonanywhere.com']
 
 # Application definition
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'crispy_forms',
 
     'allauth',
     'allauth.account',

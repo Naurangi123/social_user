@@ -166,10 +166,3 @@ FILE_UPLOAD_HANDLERS = [
     "django.core.files.uploadhandler.MemoryFileUploadHandler",
     "django.core.files.uploadhandler.TemporaryFileUploadHandler",
 ]
-
-
-try:
-    from .local_setting import *
-    
-except ImportError:
-    print("Looks like no local file. You must be on production")

@@ -23,7 +23,7 @@
 
             <form class="mb-5" method="POST">
                 {% csrf_token %}
-                {{ explore_form | crispy }}
+                {{ explore_form.as_p }}
             </form>
         </div>
     </div>

@@ -21,7 +21,7 @@
         <div class="col-md-5 col-sm-12 border-bottom">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form | crispy }}
+                {{ form.as_p }}
                 <div class="d-grid gap-2">
                     <button class="btn btn-success mt-3">Submit!</button>
                 </div>

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'crispy_forms',
-    'crispy_bootstrap5',
+    'crispy_bootstrap4',
 
     'allauth',
     'allauth.account',
@@ -95,12 +95,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
-            # 'libraries': {
-            #     'custom_tags': 'app.templatetags.custom_tags',
-            # }
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'socialmedia.wsgi.application'
 
@@ -166,8 +164,10 @@ MEDIA_ROOT = BASE_DIR / "uploads/"
 MEDIA_URL = "/media/"
 
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = 'uni_form'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = "crispy_forms"
 
 FILE_UPLOAD_HANDLERS = [

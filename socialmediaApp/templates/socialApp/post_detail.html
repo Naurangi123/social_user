@@ -55,7 +55,7 @@
         <div class="col-md-5 col-sm-12">
             <form method="POST">
                 {% csrf_token %}
-                {{ form | crispy }}
+                {{ form.as_p }}
                 <div class="d-grid gap-2">
                     <button class="btn btn-success mt-3">Submit!</button>
                 </div>
@@ -64,7 +64,7 @@
     </div>
     {% for comment in comments %}
     {% if comment.is_parent %}
-    <div class="row justify-content-center mt-3 mb-5 border-bottom">
+    <div class="row justify-content-center mt-3 mb-5 border-bottom d-none">
         <div class="col-md-5 col-sm-12">
             <p>
                 <div class="profile-section">
@@ -108,7 +108,7 @@
         <div class="col-md-5 col-sm-12">
             <form action="{% url 'comment-reply' post.pk comment.pk %}" method="POST">
                 {% csrf_token %}
-                {{ form | crispy }}
+                {{ form.as_p }}
                 <div class="d-grid gap-2">
                     <button class="btn btn-success mt-3">Submit!</button>
                 </div>

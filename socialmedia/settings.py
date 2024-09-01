@@ -170,6 +170,6 @@ FILE_UPLOAD_HANDLERS = [
 
 try:
     from .local_setting import *
-    
+
 except ImportError:
     print("Looks like no local file. You must be on production")

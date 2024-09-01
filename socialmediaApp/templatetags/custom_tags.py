@@ -1,11 +1,7 @@
 from django import template
-
 from socialmediaApp.models import Notification
 
-
-
 register = template.Library()
-
 
 @register.inclusion_tag('socialApp/show_notifications.html', takes_context=True)
 def show_notifications(context):

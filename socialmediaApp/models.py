@@ -10,7 +10,7 @@ from django.utils import timezone
 class Post(models.Model):
     shared_body = models.TextField(blank=True, null=True)
     body = models.TextField()
-    image = models.ImageField(upload_to='uploads/post_photos', blank=True, null=True)
+    image = models.ImageField(upload_to='media/post_photos', blank=True, null=True)
     created_on = models.DateTimeField(default=timezone.now)
     shared_on = models.DateTimeField(blank=True, null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -88,8 +88,7 @@ class UserProfile(models.Model):
     bio = models.TextField(max_length=150, blank=True, null=True)
     birth_date = models.DateField(null=True, blank=True)
     location = models.CharField(max_length=100, blank=True, null=True)
-    picture = models.ImageField(upload_to='uploads/profile_pictures', blank=True,
-                                default='/uploads/profile_pictures/default.png')
+    picture = models.ImageField(upload_to='media/profile_pictures', blank=True)
 
     followers = models.ManyToManyField(User, blank=True, related_name='followers')
 
@@ -127,7 +126,7 @@ class MessageModel(models.Model):
     sender_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="+")
     receiver_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="+")
     body = models.CharField(max_length=1000)
-    image = models.ImageField(upload_to='uploads/message_photos', blank=True, null=True)
+    image = models.ImageField(upload_to='media/message_photos', blank=True, null=True)
     date = models.DateTimeField(default=timezone.now)
     is_read = models.BooleanField(default=False)
 

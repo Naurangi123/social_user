@@ -167,3 +167,4 @@ FILE_UPLOAD_HANDLERS = [
     "django.core.files.uploadhandler.TemporaryFileUploadHandler",
 ]
 
+STATIC_ROOT='/home/ghost123/social_user/static'

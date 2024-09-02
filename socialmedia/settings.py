@@ -166,4 +166,9 @@ FILE_UPLOAD_HANDLERS = [
     "django.core.files.uploadhandler.TemporaryFileUploadHandler",
 ]
 
-STATIC_ROOT='/home/ghost123/social_user/static'
+STATIC_ROOT='/home/ghost123/social_user/uploads'
+
+if DEBUG:
+        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
